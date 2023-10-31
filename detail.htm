@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/assets/css/detailNav.css">
+    <link rel="stylesheet" href="./assets/css/detailMainCar.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/detailMap.css">
+    <link rel="stylesheet" href="./assets/css/mainDetails.css">
+    <link rel="stylesheet" href="./assets/css/extras.css">
+    <link rel="stylesheet" href="./assets/css/rating.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/Logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+    <title>Rido - Car Details</title>
+</head>
+
+<body>
+    <script src="./assets/js/detailPopUp.js"></script>
+
+    <!-- nav bashladi -->
+    <nav>
+        <div class="navContainer">
+            <div class="logo">
+                <a href="./index.htm">
+                <img id="rido" src="./assets/images/Vector (5).svg" alt="RIDO">
+            </a>
+            </div>
+            <div class="links">
+                <ul>
+                    <li class="nav-link" id="overview"> OVERVIEW</li>
+                    <li class="nav-link"  id="features">FEATURES</li>
+                    <li  class="nav-link" id="reviews">REVIEWS</li>
+                    <li  class="nav-link" id="location">LOCATION</li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav bitdi -->
+
+    <!-- mainCar bashladi -->
+    <section id="mainCar">
+        <div class="mainCarCont">
+            <div class="carImages">
+                <img class="image1 prev detailMainCarImg" src="https://cdn.pixabay.com/photo/2019/07/07/14/03/fiat-500-4322521_1280.jpg" alt="RIDO">
+                <img class="image2 current detailMainCarImg" src="./assets/images/Mask group (1).png" alt="RIDO">
+                <img class="image3 next detailMainCarImg" src="https://cdn.pixabay.com/photo/2015/05/28/23/12/auto-788747_1280.jpg" alt="RIDO">
+                <img class="image4 detailMainCarImg" src="https://cdn.pixabay.com/photo/2023/09/20/19/47/stones-8265502_1280.jpg" alt="RIDO">
+                <div class="slideCount"><i id="leftBtn" class="fa-solid fa-angle-left"></i><sub ><span id="currentCount" >1</span>/ <span id="allCount" ></span> </sub><i
+                    id="rightBtn"     class="fa-solid fa-angle-right"></i></div>
+            </div>
+            <div class="carInfo">
+                <!-- carInfoLeft bashladi -->
+                <div class="carInfoLeft">
+                    <div class="carNameAndStars">
+                        <div class="carName">
+                            <h3>Kia Optima Hybrid - 2013</h3>
+                        </div>
+                        <div class="carStars">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <sub><span id="previewCount">24</span> Reviews</sub>
+                        </div>
+                    </div>
+                    <div class="carDescription">
+                        <sub>Description</sub>
+                        <h6>Beautiful Kia Optima Hybrid-new just arrived be the first to enjoy it.</h6>
+                    </div>
+                </div>
+                <!-- carInfoLeft bitdi -->
+
+                <!-- carInfoRight bashladi -->
+                <div class="carInfoRight">
+                    <div class="mainCarSelections">
+                        <div class="tripStart">
+                            <sub>Trip start</sub>
+                            <div id="startSelection" class="selection">
+                                <div id="tripStartDate" class="tripDate">
+                                    <sub id="startDate">09/20/2023</sub> <i id="startDateArrow" class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div id="tripStartTime" class="tripTime">
+                                    <sub id="startTime">10.00 AM</sub> <i id="startTimeArrow" class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tripEnd">
+                            <sub>Trip end</sub>
+                            <div id="endSelection" class="selection">
+
+                                <div id="tripEndDate" class="tripDate">
+                                    <sub id="endDate">09/22/2023</sub> <i id="endDateArrow" class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div id="tripEndTime" class="tripTime">
+                                    <sub id="endTime">10.00 AM</sub> <i id="endTimeArrow" class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pickup">
+                            <sub>Pickup & return location</sub>
+                            <div id="selection" class="selection">
+                                <sub id="locationValue">Baku, Azerbaijan </sub> <i id="locationArrow" class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- carInfoRight rent bashladi -->
+
+                    <div class="rent">
+                        <div class="price">
+                            <div class="priceByDay">
+                                <p>₼45</p>
+                                <sub>₼36 / day</sub>
+                            </div>
+                            <h5>₼62 est. total</h5>
+
+                        </div>
+                        <button id="rentButton" class="rentButton">Rent Now <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- mainCar bitdi -->
+
+    <!-- main details bashladi -->
+
+    <section id="mainDetails">
+
+        <div class="mainDetailsCont">
+
+            <div class="mainDetailsLeft">
+
+                <div class="mainDetailsLeftTop">
+                    <div class="peopleAndTransmissionDetails">
+                        <div class="peopleDetails"><img src="./assets/images/Peoples icon.svg" alt="People">
+                            <sub><span>4</span> People</sub>
+                        </div>
+                        <div class="transmissionDetails"><img src="./assets/images/Transmission.svg" alt="Transmission">
+                            <sub>Automatic</sub>
+                        </div>
+                    </div>
+                    <div class="petrolAndLitreDetails">
+                        <div class="petrolDetails"><img src="./assets/images/petrol.svg" alt="Petrol"> <sub>Petrol</sub>
+                        </div>
+                        <div class="litreDetails"> <img src="./assets/images/Engine.svg" alt=""> <sub><span>1.6</span>
+                                L</sub></div>
+                    </div>
+                </div>
+
+                <div class="mainDetailsLeftBottom">
+                    <div class="detailsFeatures">
+                        <sub>FEATURES</sub>
+                        <div id="moreFeatures" class="moreFeatures">
+                            <div class="moreFeaturesTop">
+                                <div class="whiteShadow"></div>
+                                <div class="moreFeaturesTopLeft">
+                                    <div class="playerFeature"><img src="./assets/images/Play Circle.svg" alt="Play">
+                                        <sub>Android Auto</sub>
+                                    </div>
+                                    <div class="snowChainFeature"><img src="./assets/images/Snowflake.svg"
+                                            alt="Snow Chain">
+                                        <sub>Snow tires or chains</sub>
+                                    </div>
+                                    <div class="bluetoothFeature"><img src="./assets/images//Vector (Stroke).svg"
+                                            alt="Bluetooth">
+                                        <sub>Bluetooth</sub>
+                                    </div>
+                                    <div class="bluetoothFeature"><img src="./assets/images//Vector (Stroke).svg"
+                                            alt="Bluetooth">
+                                        <sub>Bluetooth</sub>
+                                    </div>
+                                    <div class="bluetoothFeature"><img src="./assets/images//Vector (Stroke).svg"
+                                            alt="Bluetooth">
+                                        <sub>Bluetooth</sub>
+                                    </div>
+                                    <div class="bluetoothFeature"><img src="./assets/images//Vector (Stroke).svg"
+                                            alt="Bluetooth">
+                                        <sub>Bluetooth</sub>
+                                    </div>
+                                </div>
+                                <div class="moreFeaturesTopRight">
+                                    <div class="bluetoothFeature"><img src="./assets/images//Vector (Stroke).svg"
+                                            alt="Bluetooth">
+                                        <sub>Bluetooth</sub>
+                                    </div>
+                                    <div class="childSeatFeature"><img src="./assets/images/Smile Circle.svg"
+                                            alt="Child Seat">
+                                        <sub>Child Seat</sub>
+                                    </div>
+                                    <div class="bluetoothFeature"><img src="./assets/images//Vector (Stroke).svg"
+                                            alt="Bluetooth">
+                                        <sub>Bluetooth</sub>
+                                    </div>
+                                    <div class="bluetoothFeature"><img src="./assets/images//Vector (Stroke).svg"
+                                            alt="Bluetooth">
+                                        <sub>Bluetooth</sub>
+                                    </div>
+                                    <div class="bluetoothFeature"><img src="./assets/images//Vector (Stroke).svg"
+                                            alt="Bluetooth">
+                                        <sub>Bluetooth</sub>
+                                    </div>
+                                    <div class="bluetoothFeature"><img src="./assets/images//Vector (Stroke).svg"
+                                            alt="Bluetooth">
+                                        <sub>Bluetooth</sub>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <button id="moreFeaturesBtn" class=" whiteBtn moreFeaturesBtn"><sub
+                                    class="btnText featureBtn">More</sub></button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="extras">
+                    <div class="extrasText">
+                        <sub>EXTRAS</sub>
+                        <div class="addOptional">
+                            <sub>Add optional Extras to your trip at checkout</sub>
+                        </div>
+                    </div>
+
+
+                    <div class="title">
+                        <div class="titleText">
+                            <sub class="titleTextTitle">Title</sub>
+                            <sub class="titleLabel">Label</sub>
+                            <sub class="titleNum">15</sub>
+                        </div>
+                        <button class="whiteBtn"><sub class="btnText">More</sub></button>
+                    </div>
+
+                    <div class="insurance">
+                        <sub class="insuranceHead">INSURANCE</sub>
+                        <div class="addOptional">
+                            <sub>Add optional Extras to your trip at checkout</sub>
+                        </div>
+                        <button class="whiteBtn"><sub class="btnText">More</sub></button>
+                    </div>
+                </div>
+                <!-- ratng start -->
+                <div id="ratings">
+
+                    <!--     ratingAndStars start -->
+                    <div class="ratingAndStars">
+                        <sub class="ratingHeader">RATING AND REVIEWS</sub>
+                        <div class="rating">
+                            <div class="stars">
+                                <h3>4.94</h3> <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="ratingCount">
+                                <sub>(52 ratings)</sub>
+                            </div>
+                        </div>
+                    </div>
+                    <!--     ratingAndStars end -->
+
+                    <!--     scores start -->
+                    <div class="scores">
+
+                        <div class="score">
+                            <div class="scoreText"><sub>Cleanliness</sub></div>
+                            <div class="scoreBar">
+                                <div class="bar">
+                                    <div class="barColor">
+                                    </div>
+                                </div>
+                            </div> <sub class="point">5.0</sub>
+                        </div>
+
+                        <div class="score">
+                            <div class="scoreText"><sub>Maintenance</sub></div>
+                            <div class="scoreBar">
+                                <div class="bar">
+                                    <div class="barColor">
+                                    </div>
+                                </div>
+                            </div> <sub class="point">5.0</sub>
+                        </div>
+
+                        <div class="score">
+                            <div class="scoreText"><sub>Communication</sub></div>
+                            <div class="scoreBar">
+                                <div class="bar">
+                                    <div class="barColor">
+                                    </div>
+                                </div>
+                            </div> <sub class="point">5.0</sub>
+                        </div>
+
+                        <div class="score">
+                            <div class="scoreText"><sub>Convinence</sub></div>
+                            <div class="scoreBar">
+                                <div class="bar">
+                                    <div class="barColor">
+                                    </div>
+                                </div>
+                            </div> <sub class="point">5.0</sub>
+                        </div>
+
+                        <div class="score">
+                            <div class="scoreText"><sub>Accuracy</sub></div>
+                            <div class="scoreBar">
+                                <div class="bar">
+                                    <div class="barColor">
+                                    </div>
+                                </div>
+                            </div> <sub class="point">5.0</sub>
+                        </div>
+
+                    </div>
+                    <!--     scores end -->
+
+
+
+                </div>
+                <!-- rating bitdi -->
+                <div class="comments">
+                    <!-- comment -->
+                    <div class="comment">
+                        <img class="commentor" src="./assets/images/Avatars.png" alt="">
+
+                        <div class="commentDetail">
+
+                            <div class="commentNameStarsAndDate">
+                                <div class="commentStars"> <i class="  fa-solid fa-star stared"></i><i
+                                        class="fa-solid fa-star stared"></i><i class="fa-solid fa-star stared"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="commentorNameAndDate"><sub class="name">Samuel</sub> <sub class="date">20
+                                        august 2023</sub></div>
+
+                            </div>
+                            <sub class="commentText">Awesome car and great client experience</sub>
+                        </div>
+                    </div>
+                    <!-- comment -->
+
+                    <!-- comment -->
+                    <div class="comment">
+                        <img class="commentor" src="./assets/images/Avatars.png" alt="">
+
+                        <div class="commentDetail">
+
+                            <div class="commentNameStarsAndDate">
+                                <div class="commentStars"> <i class="fa-solid fa-star stared"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="commentorNameAndDate"><sub class="name">Samuel</sub> <sub class="date">20
+                                        august 2023</sub></div>
+
+                            </div>
+                            <sub class="commentText">Awesome car and great client experience</sub>
+                        </div>
+                    </div>
+                    <!-- comment -->
+
+                    <!-- comment -->
+                    <div class="comment">
+                        <img class="commentor" src="./assets/images/Avatars.png" alt="">
+
+                        <div class="commentDetail">
+
+                            <div class="commentNameStarsAndDate">
+                                <div class="commentStars"> <i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="commentorNameAndDate"><sub class="name">Samuel</sub> <sub class="date">20
+                                        august 2023</sub></div>
+
+                            </div>
+                            <sub class="commentText">Awesome car and great client experience</sub>
+                        </div>
+                    </div>
+                    <!-- comment -->
+
+                    <!-- comment -->
+                    <div class="comment">
+                        <img class="commentor" src="./assets/images/Avatars.png" alt="">
+
+                        <div class="commentDetail">
+
+                            <div class="commentNameStarsAndDate">
+                                <div class="commentStars"> <i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="commentorNameAndDate"><sub class="name">Samuel</sub> <sub class="date">20
+                                        august 2023</sub></div>
+
+                            </div>
+                            <sub class="commentText">Awesome car and great client experience</sub>
+                        </div>
+                    </div>
+                    <!-- comment -->
+
+                    <!-- comment -->
+                    <div class="comment">
+                        <img class="commentor" src="./assets/images/Avatars.png" alt="">
+
+                        <div class="commentDetail">
+
+                            <div class="commentNameStarsAndDate">
+                                <div class="commentStars"> <i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="commentorNameAndDate"><sub class="name">Samuel</sub> <sub class="date">20
+                                        august 2023</sub></div>
+
+                            </div>
+                            <sub class="commentText">Awesome car and great client experience</sub>
+                        </div>
+                    </div>
+                    <!-- comment -->
+
+                </div>
+
+            </div>
+
+            <!-- mainDetailsLeft bitdi -->
+
+            <!-- mainDetailsRight bashladi -->
+
+            <div class="mainDetailsRight">
+
+                <div class="mainDetailsRightTop">
+                    <div class="hosted">
+                        <div class="hostedRightTop">
+                            <div class="hostedleft">
+                                <sub>HOSTED BY</sub>
+                                <img src="./assets/images/Ellipse 3.png" alt="">
+                                <div class="hostedRating"><sub class="hosterScore">5.0</sub> <i
+                                        class="fa-solid fa-star"></i></div>
+                            </div>
+                            <div class="hostedRight">
+                                <div class="nameAndHost">
+                                    <sub class="hostName">Daniel</sub>
+                                    <div class="hostStarAndIcon"><img class="medial"
+                                            src="./assets/images/Medal Ribbons Star.svg" alt=""> <sub>All-Star
+                                            Host</sub></div>
+
+                                </div>
+                                <div class="tripsAndJoined">
+                                    <div class="tripsAndJoinedText">
+                                        <sub class="trips">176 trips</sub>
+                                        <div class="block"></div>
+                                        <sub class="joined">Joined Jul 2019</sub>
+                                    </div>
+                                    <sub class="responds">Typically responds in 12 minutes</sub>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="mainDetailsRightTopAchievments">
+                        <div class="achievmentTop"><img src="./assets/images/Medal Ribbons Star.svg" alt="">
+                            <div class="achievmentText">
+                                <sub>All-Star Hosts like Daniel are the top-rated and most experienced hosts on
+                                    RIDO</sub>
+                                <button class="btnText">Learn more</button>
+                            </div>
+                        </div>
+                        <div class="achievmentBottom">
+                            <img src="./assets/images/Waterdrops.svg" alt="">
+                            <div class="achievmentText">
+                                <sub>Daniel has completed training on enhanced cleaning and disinfection
+                                    practices.</sub>
+                                <button class="btnText">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- mainDetailRight bitdi -->
+        </div>
+
+    </section>
+
+
+    <!-- main details bitdi -->
+
+
+
+
+
+    <!-- map bashladi -->
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12149.579944961957!2d49.7927986550609!3d40.42225190043455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403087b9c663cdbd%3A0x3f25195eefaed750!2s9th%20Microdistrict%2C%20Baku!5e0!3m2!1sen!2saz!4v1696708652048!5m2!1sen!2saz"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- map bitdi -->
+    <!-- footer bashladi -->
+
+    <footer>
+        <div class="footerTop">
+            <div class="footerContainer  container">
+                <div class="footerImg">
+                    <img src="./assets/images/Vector (3).svg" alt="">
+                </div>
+
+                <div class="footerLinks">
+                    <ul>
+                        <li>
+                            <h2>RIDO</h2>
+                        </li>
+                        <li>For Users</li>
+                        <li>Our Partners</li>
+                        <li>About Us</li>
+                        <li>FAQ</li>
+                        <li>Contacts</li>
+                    </ul>
+                </div>
+
+                <div class="footerLinks">
+                    <ul>
+                        <li>
+                            <h2>Explore</h2>
+                        </li>
+                        <li>Book a car</li>
+                        <li>Weddings</li>
+                        <li>Trust & safety</li>
+                        <li>Sustainability</li>
+                        <li>Get help</li>
+                    </ul>
+                </div>
+
+
+                <div class="footerLinks">
+                    <ul>
+                        <li>
+                            <h2>Hosting</h2>
+                        </li>
+                        <li>List your car</li>
+                        <li>Carculator</li>
+                        <li>All-Star Hosts</li>
+                        <li>Host tools</li>
+                        <li>Insurance & protection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <div class="lines">
+                <div class="line firstLine"></div>
+            </div>
+            <div class="medias">
+                <ul>
+                    <li><img src="/assets/images/Social media.svg" alt=""></li>
+                    <li><img src="/assets/images/Social media (1).svg" alt=""></li>
+                    <li><img src="/assets/images/Social media (2).svg" alt=""></li>
+                    <li><img src="/assets/images/Social media (3).svg" alt=""></li>
+                    <li><img src="/assets/images/Social media (4).svg" alt=""></li>
+
+                </ul>
+            </div>
+            <div class="lines">
+                <div class="line secondLine"></div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- footer bitdi -->
+</body>
+<script src="./assets/js/sliderDetail.js"></script>
+
+<script>
+
+
+    const moreFeaturesBtn = document.getElementById("moreFeaturesBtn")
+    const moreFeaturesTop = document.querySelector(".moreFeaturesTop")
+    const featureBtn = document.querySelector(".featureBtn")
+    const whiteShadow = document.querySelector(".whiteShadow")
+
+    moreFeaturesBtn.addEventListener("click", () => {
+
+
+
+        moreFeaturesTop.classList.toggle("moreFeaturesTopOpen")
+        whiteShadow.classList.toggle("whiteShadowOpen")
+
+        if (whiteShadow.classList.contains("whiteShadowOpen")) {
+            featureBtn.innerHTML = "Less";
+        } else {
+            featureBtn.innerHTML = "More";
+        }
+    })
+
+
+
+
+
+</script>
+<script src="./assets/js/navigationAnimation.js"></script>
+
+</html>
